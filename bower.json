@@ -1,0 +1,35 @@
+{
+  "name": "johhat.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/johhat/johhat.github.io",
+  "authors": [
+    "Johan Hatleskog <johan.hatleskog@gmail.com>"
+  ],
+  "description": "Yet another github pages page",
+  "main": "index.html",
+  "keywords": [
+    "static",
+    "jekyll",
+    "bootstrap",
+    "blog"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "components-font-awesome": "~4.3.0",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git",
+    "anchor-js": "~1.2.1",
+    "fontawesome": "~4.4.0",
+    "animate.css": "~3.3.1",
+    "headroom.js": "~0.7.0"
+  },
+  "devDependencies": {}
+}

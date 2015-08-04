@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<header>
+				  <h1 class="post-title">{{ page.title }}</h1>
+				  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+				</header>
+
+				<article>
+				  {{ content }}
+				</article>
+
+			  	<nav>
+				  <ul class="pager">
+					{% if page.previous != null %}
+						<li class="previous" ><a data-toggle="tooltip" data-placement="right" title="Go to: {{page.previous.title}}" href="{{page.previous.url| prepend: site.baseurl}}"><span aria-hidden="true">&larr;</span> Older</a></li>
+					{% else %}
+						<li class="previous disabled"><a data-toggle="tooltip" data-placement="right" title="No older posts." href="{{page.previous.url| prepend: site.baseurl}}"><span aria-hidden="true">&larr;</span> Older</a></li>
+					{% endif %}
+
+					{% if page.next != null %}
+						<li class="next"><a data-toggle="tooltip" data-placement="left" title="Go to: {{page.next.title}}" href="{{page.next.url| prepend: site.baseurl}}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+					{% else %}
+						<li class="next disabled"><a data-toggle="tooltip" data-placement="left" title="No newer posts yet." href="{{page.next.url| prepend: site.baseurl}}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+					{% endif %}
+				  </ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>

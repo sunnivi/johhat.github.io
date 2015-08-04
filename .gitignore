@@ -1,0 +1,20 @@
+notes.txt
+blog.sublime-workspace
+blog.sublime-project
+_site
+.sass-cache
+.travis.yml
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+bower_components

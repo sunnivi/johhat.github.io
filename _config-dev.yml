@@ -1,0 +1,7 @@
+#Use this file to overwrite variables from config.yml
+#Both configs are passed as arguments, but this will overwrite as this comes last
+
+# Custom variables
+env: dev
+js-manifest: js-dev-manifest
+css-manifest: css-dev-manifest

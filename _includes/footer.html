@@ -1,0 +1,43 @@
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+		        <ul class="list-unstyled list-inline social-icon-group">
+		          <li>
+		              <a href="https://github.com/{{site.github_username}}">
+		                <i class="social-icon fa fa-github" data-toggle="tooltip" data-placement="top" title="Github"></i>
+		              </a>
+		          </li>
+		          <li>
+		              <a href="mailto:{{site.email}}">
+		                <i class="social-icon fa fa-envelope-o" data-toggle="tooltip" data-placement="top" title="Email"></i>
+		              </a>
+		          </li>
+		          <li>
+		              <a href="#">
+		                <i class="social-icon fa fa-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"></i>
+		              </a>	          
+		          </li>
+		        </ul>
+      		</div>
+
+			<div class="col-md-2 col-md-offset-6 hidden-xs hidden-sm">
+		        <p class="text-muted">{{ site.description }}</p>
+		    </div>
+		</div>
+	</div>
+
+  {% capture jsPath %}/public/js/{{site.data[site.js-manifest]["bundle.js"]}}{% endcapture %}
+  <script type="text/javascript" src="{{ jsPath | prepend: site.baseurl }}"></script>
+
+  <!--Analytics-->
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-65954360-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</footer>
