@@ -17,12 +17,11 @@ body {
 	font-size: 16px;
 
 	color: @main-color;
-
 }
 
 a {
 	color: @main-color;
-	text-decoration: none;
+	text-decoration: underline dotted;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -36,6 +35,7 @@ h1 {
 
 	muted {
 		font-size: 0.5em;
+		opacity: 0.4;
 	}
 }
 
@@ -70,6 +70,8 @@ p {
 .social-icons {
 
 	> ul > li {
+		transition: background-color 0.3s ease, color 0.3s ease;
+
 		padding: 1px;
 
 		text-align: center;
@@ -81,15 +83,21 @@ p {
 		height: 1.5em;
 		line-height: 1.5em;
 
-	  > a {
-	  	height: 2em;
-	  	width: 2em;
+		&:hover {
+			background-color: @main-color;
+			color: white;
+		}
 
-	  	&:hover, 
-	  	&visited {
-	  		color: @main-color;
-	  	}
-	  }
+		> a {
+			height: 2em;
+			width: 2em;
+			color: inherit;
+
+			&:hover, 
+			&visited {
+				color: inherit;
+			}
+		}
 	}
 }
 
