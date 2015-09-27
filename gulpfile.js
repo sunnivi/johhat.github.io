@@ -18,21 +18,19 @@ var paths = {
 	js: [ 
 		//Note: order matters - the files will be concated in order of appearance
 		'./bower_components/jquery/dist/jquery.js',
-		'./bower_components/bootstrap/dist/js/bootstrap.js',
-		'./bower_components/smooth-scroll/dist/js/smooth-scroll.js',
-		'./bower_components/anchor-js/anchor.js',
-		'./bower_components/headroom.js/dist/headroom.js',
-		'./bower_components/headroom.js/dist/jQuery.headroom.js',
+		'./bower_components/tether/dist/js/tether.js',
+		'./bower_components/tether-drop/dist/js/drop.js',
+		'./bower_components/tether-tooltip/dist/js/tooltip.js',
 		'./js/**/*.js'
 	],
 	less: [
 	    //The main less folder (./less) is included by default
-		'./bower_components/bootstrap/less/',
+        './bower_components/normalize.css/',
         './bower_components/fontawesome/less/',
+        './bower_components/tether-tooltip/dist/css/',
         './bower_components/animate.css/'
     ],
     fonts: [
-		'./bower_components/bootstrap/fonts/*',
 		'./bower_components/fontawesome/fonts/*'
 	],
 	images: './images/*'

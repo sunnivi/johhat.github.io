@@ -1,4 +1,4 @@
-A github pages page. It is based on the standard jekyll template, but with bootrap added. Gulp used as build system.
+A github pages page. It is based on the standard jekyll template. Gulp used as build system.
 
 ##To test locally
 1. Install jekyll following the [github pages guide][gh-pages-jekyll-guide].

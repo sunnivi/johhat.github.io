@@ -2,138 +2,86 @@
 layout: default
 title: Home
 ---
-<div id="header">
-  
-  <!--These two divs fill header with background-->
-  <div class="medium-effect regular-bg"></div>
-  <div class="medium-effect blur-bg"></div>
-
-  <div class="container"> 
-    <div class="row">
-      <div class="col-md-12 text-center">
-          <div>
-            <h1 class="animated fadeIn">{{site.long_title}}</h1>
-            <p class="animated fadeIn animation-delay-2">
-              Yet another home page. This site is under construction now, but in a while it will be a worthy home page. Stay tuned.
-            </p>
-            <div class="social-icon-group animated fadeIn animation-delay-3">
-              <a href="https://github.com/{{site.github_username}}">
-                <i class="social-icon fa fa-github" data-toggle="tooltip" data-placement="bottom" title="Github"></i>
-              </a>
-              <a href="mailto:{{site.email}}">
-                <i class="social-icon fa fa-envelope-o" data-toggle="tooltip" data-placement="bottom" title="Email"></i>
-              </a>
-              <a href="#">
-                <i class="social-icon fa fa-linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i>
-              </a>
-            </div>
-          </div>
-      </div>
+<div class="container">
+  <section class="heading">
+    <h1>johan hatleskog</h1>
+    <hr/>
+    <div class="social-icons">
+      <ul class="inline-list">
+        <li>
+            <a href="mailto:{{site.email}}" data-tooltip="Email me" data-tooltip-position="bottom center">
+              <i class="social-icon fa fa-envelope-o" title="Email"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com/johhat" data-tooltip="Instagram" data-tooltip-position="bottom center">
+              <i class="social-icon fa fa-instagram" title="Instagram"></i>
+            </a>            
+        </li>
+        <li>
+            <a href="https://twitter.com/johanhatleskog" data-tooltip="Twitter" data-tooltip-position="bottom center">
+              <i class="social-icon fa fa-twitter" title="Twitter"></i>
+            </a>            
+        </li>
+        <li>
+            <a href="https://github.com/{{site.github_username}}" data-tooltip="Github" data-tooltip-position="bottom center">
+              <i class="social-icon fa fa-github" title="Github"></i>
+            </a>
+        </li>
+      </ul>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="latest-blog section-spacing bg-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2 class="text-center animated fadeIn animation-delay-4">Blog posts</h2>
-        <ul class="list-unstyled">
-          {% for post in site.posts %}
-            <li class="animated fadeIn animation-delay-4">
-            <strong>
-              {{ post.date | date: "%b %-d, %Y" }}
-            </strong>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+  <section>
+    <h2>about me</h2>
+    <p>
+      My main interests are music, technology and business &amp; administration. I like to build things, both products and organizations.
+    </p>
+    <p>
+        Currently I live in Trondheim in Norway, where I study Engineering Cybernetics at The Norwegian University of Science and Technology.
+    </p>
+  </section>
 
-<div class="projects section-spacing invert">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center animated fadeIn animation-delay-4">Current projects</h2>
-      </div>
-      <div class="col-md-8 col-md-offset-2">
-        <ul class="media-list">
-          {% for project in site.data.projects %}
-          <li class="media animated fadeIn animation-delay-4">
-            <div class="media-left">
-              <a href="{{project.image_target}}">
-                <img class="media-object media-thumbnail" src="{{project.image_url}}">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">{{project.title}} <small>{{project.title_small}}</small></h4>
-              <p>{{project.description}}</p>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
- </div>
-</div>
+  <section>
+    <h2>current projects</h2>
+    <p>
+      <strong>Project leader and co-founder, Ascend NTNU.</strong> Ascend NTNU is a new aerial robotics team, created to represent The Norwegian University of Science and Technology in the International Aerial Robotics Competition. This competition was made to forward the state of autonmus aerial robotics, and their missions represent challenges that currenly are impossible for any flying robot owned by government or industry. When we started the project in the summer of 2015, it was very well recieved by our faculty at the university. They gave us our very own lab, and other resources to get us started. We are now 14 persons cooperating with both the university and Norwegian industy to solve the current mission.
+    </p>
 
-<div class="parallax-window">
-  <!--picture goes here-->
-</div>
+    <p>
+      <strong>Consultant, Beerenberg HR.</strong> Beerenberg is an industrial company with 1500 employees located in Bergen. My current work for their human resources departement is related to capacity utilization, cost calculations and development of platforms to facilitate efficient communication between the departement and the other branches of the organization. I do a lot of heavy analytic work for them, where the tasks typically involve aggregation of huge amounts of data. In turn, the findings and models I make help them take good decisions. I have worked for them in various roles since 2009, and I usually spend my entire summer at their office.
+    </p>
 
-<div class="education section-spacing bg-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center animated fadeIn">Education</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <ul class="media-list">
-          {% for education in site.data.education %}
-          <li class="media animated fadeIn">
-            <div class="media-left">
-              <a href="{{education.image_target}}">
-                <img class="media-object media-thumbnail" src="{{education.image_url}}">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">{{education.title}} <small>{{education.title_small}}</small></h4>
-              <p>{{education.description}}</p>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+    <p>
+      <strong>Bass player and co-founder, Fagernes Yacht Klubb.</strong> Fagernes Yacht Klubb is a concept band covering Yacht Rock. Think Toto, Steely Dan, Doobie brothers and similar smooth music. The band has grown steadily in popularity since we started in 2009, and now we play public concerts for a few thousand extatic people each year. I both the bass and manage the bands economy.
+    </p>
 
+    <p>
+      <strong>Bass player and co-founder, The New Wine.</strong> The New Wine is a four-person band playing our own electro-inspired music in a live format. While we are laying low at the moment, we have done a lot of stuff in the past. In Norway we have played festivas such as Øya, Hove and Vinjerock. We have toured a lot in Europe, our longest trip being a one month support-tour with The Whitest Boy Alive. Shortly after the release of our debut album Waves, we went to Japan in 2011 and did a few concerts there. A visit which suddendly became a bit more dramatic than planned, as we still were in Japan when the massive 2011 earthquake struck the country.
+    </p>
+  </section>
 
-<div class="interests section-spacing invert">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div>
-          <h2 class="text-center animated fadeIn">Interests</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 animated fadeIn">
-          <ul>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-          </ul>
-      </div>
-    </div>
-  </div>
+  <section>
+    <h2>education</h2>
+    <p>
+      <strong>The Norwegian University of Science and Technology</strong>, Masters degree in Engineering Cybernetics. Graduating in 2018.
+    </p>
+    <p>
+      <strong>The Norwegian School of Economics</strong>, Bachelors degree in Business and and administration. Graduated in 2013.
+    </p>
+  </section>
+
+  <section>
+    <h2>my company</h2>
+    <p>
+      I have my very own company called Johan Hatleskog enkeltmannsforetak, where enkeltmannsforetak means something like single-person-company. Official information about this lives at brønnysundregistrene.
+    </p>
+  </section>
+
+  <section>
+    <h2>contact me</h2>
+    <p>
+      Send an email to <a href="mailto:johan.hatleskog@gmail.com">johan.hatleskog@gmail.com</a>, and I'll get back to you.
+    </p>
+  </section>
 </div>
