@@ -12,6 +12,9 @@ var minifyCss 	= require('gulp-minify-css');
 var flatten		= require('gulp-flatten');
 var rev         = require('gulp-rev');
 var imagemin 	= require('gulp-imagemin');
+var htmlhint    = require('gulp-htmlhint');
+var w3cjs       = require('gulp-w3cjs');
+var jshint      = require('gulp-jshint');
 
 //Paths to dependencies
 var paths = {
@@ -124,6 +127,7 @@ gulp.task('clean-css',function (cb) {
 /*
 	Jekyll build tasks
 */
+gulp.task('jekyll',['jekyll-build']);
 
 gulp.task('jekyll-build-production',['js-production','less-production','fonts','image-min'], function (done) {
     return cp.spawn('bundle',['exec','jekyll','build'], {stdio: 'inherit'})
@@ -144,6 +148,37 @@ gulp.task('jekyll-build', function (done) {
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     browserSync.reload();
+});
+
+/*
+	Linter tasks
+*/
+gulp.task('lint',['html-lint','html-validate','js-lint']);
+
+gulp.task('html-lint',function() {
+	return gulp.src('./_site/**/*.html')
+    			.pipe(htmlhint())
+    			.pipe(htmlhint.reporter());
+});
+ 
+gulp.task('html-validate', function () {
+	var through2 = require('through2');
+    
+    return gulp.src('./_site/**/*.html')
+        .pipe(w3cjs())
+        .pipe(through2.obj(function(file, enc, cb){
+            cb(null, file);
+            if (!file.w3cjs.success){
+                throw new Error('HTML validation error(s) found');
+            }
+        }));
+});
+
+gulp.task('js-lint',function() {
+	return gulp.src('./js/**/*.js')
+		.pipe(jshint())
+	  	.pipe(jshint.reporter('jshint-stylish'))
+	  	.pipe(jshint.reporter('fail'));
 });
 
 /*
