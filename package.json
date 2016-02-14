@@ -11,10 +11,8 @@
     "url": "https://github.com/johhat/johhat.github.io.git"
   },
   "keywords": [
-    "blog",
     "jekyll",
     "static",
-    "bootstrap",
     "gulp",
     "bower"
   ],
