@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify		= require('gulp-uglify');
 var concat 		= require('gulp-concat');
 var size		= require('gulp-size');
-var minifyCss 	= require('gulp-minify-css');
+var cssnano     = require('gulp-cssnano');
 var flatten		= require('gulp-flatten');
 var rev         = require('gulp-rev');
 var imagemin 	= require('gulp-imagemin');
@@ -99,7 +99,7 @@ gulp.task('less-production',['clean-css'],function() {
         .pipe(less({paths:paths.less}))
         .pipe(autoprefixer())
         .pipe(size({title:'css-size before minification'}))
-        .pipe(minifyCss())
+        .pipe(cssnano())
         .pipe(size({title:'css-size after minification'}))
         .pipe(rev())
         .pipe(gulp.dest('./public/css'))
