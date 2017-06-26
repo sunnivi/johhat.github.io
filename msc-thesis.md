@@ -2,7 +2,8 @@
 layout: default
 title: Msc thesis
 ---
-
-## Lorem ipsum
-Lorem ipsum.
+<div class="container">
+    <h2>Lorem ipsum</h2>
+    <p>Lorem ipsum</p>
+</div>
 
