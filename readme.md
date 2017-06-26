@@ -1,17 +1,15 @@
 A github pages page. It is based on the standard jekyll template. Gulp used as build system.
 
-## To test locally
+## Instructions
 1. Install jekyll following the [github pages guide][gh-pages-jekyll-guide].
-2. Install server side dev dependencies using `npm install`
-3. Install client side dependencies using `bower install`
-4. Start server using `gulp` when in the project root.
+2. Install dev dependencies using `npm install`
+3. Use `gulp [taskname]` to run tasks when in the project root.
 
-You need nodejs and a global install of the npm packages less, gulp, BrowserSync and bower to do this.
+You need nodejs and a global install of the npm packages less, gulp and BrowserSync in order to run the tasks.
 
 ## Keeping packages up to date
 Three usefull commands
 * `npm update` to update npm packages
-* `bower update` to update bower packages
 * `bundle update` to update Github-pages jekyll dependencies
 
 ## Favico
