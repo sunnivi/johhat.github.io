@@ -3,9 +3,19 @@ layout: default
 title: Msc thesis
 ---
 <div class="container">
-    <h2>Lorem ipsum</h2>
-    <p>Lorem ipsum</p>
+    <h1>Main heading<h1>
+    <p>Intro paragraph.</p>
 
-    <img class="border" src="/public/img-raw/animation.gif" alt="Animation">
+    <section>
+        <h2>Sub heading section 1</h2>
+        <p>Paragraph discussing sample shown underneath</p>
+        <img class="border" src="/public/img-raw/animation.gif" alt="Animation 1"></img>
+    </section>
+
+    <section>
+        <h2>Sub heading section 2</h2>
+        <p>Paragraph discussing sample shown underneath</p>
+        <img class="border" src="/public/img-raw/animation.gif" alt="Animation 2"></img>
+    </section>
 </div>
 
