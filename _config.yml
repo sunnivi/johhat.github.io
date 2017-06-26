@@ -1,14 +1,14 @@
 # Site settings
-title: JH
-long_title: Johan Hatleskog
-email: "johan.hatleskog@gmail.com"
+title: SI
+long_title: Sunniva Indrehus
+email: "sunihus@gmail.com"
 #Description will appear in the document head meta (for
 #Google search results) and in your feed.xml site description.
 description: > # this means to ignore newlines until "baseurl:"
   My home page.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.hatleskog.xyz" # the base hostname & protocol for your site
-github_username:  johhat
+url: "https://sunnivi.github.io/" # the base hostname & protocol for your site
+github_username:  sunnivi
 # Build settings
 markdown: kramdown
 exclude: [package.json,less,js,node_modules,bower_components,readme.md,blog.sublime-project,blog.sublime-workspace,bower.json,config.json,gulpfile.js,notes.txt]
