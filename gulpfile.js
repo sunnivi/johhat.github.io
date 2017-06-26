@@ -24,12 +24,11 @@ var paths = {
 	],
 	less: [
 	    //The main less folder (./less) is included by default
-        './bower_components/normalize.css/',
-        './bower_components/fontawesome/less/',
-        './bower_components/animate.css/'
+        './node_modules/normalize.css/',
+        './node_modules/font-awesome/less/',
     ],
     fonts: [
-		'./bower_components/fontawesome/fonts/*'
+		'./node_modules/font-awesome/fonts/*'
 	],
 	images: './images/*'
 };
@@ -129,6 +128,8 @@ gulp.task('jekyll-build-production',['js-production','less-production','fonts','
         .on('close', done);
 });
 
+gulp.task('build-production',['js-production','less-production','fonts','image-min']);
+
 //This task is needed to avoid race condition
 gulp.task('jekyll-initial-build',['js','less','fonts','image-min'], function (done) {
     return cp.spawn('bundle',['exec','jekyll','build','--config','_config.yml,_config-dev.yml'], {stdio: 'inherit'})
@@ -204,7 +205,11 @@ gulp.task('watch', function () {
 gulp.task('production-test',['browser-sync-production']);
 
 //Run before pushing repo to gh-pages
-gulp.task('publish',['jekyll-build-production']);
+gulp.task('jekyll-publish',['jekyll-build-production']);
+
+gulp.task('publish',['build-production']);
 
 //Launch browsersync and watch
-gulp.task('default', ['browser-sync', 'watch']);
+//gulp.task('default', ['browser-sync', 'watch']);
+
+gulp.task('default', ['publish']);

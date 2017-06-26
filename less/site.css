@@ -1,0 +1,101 @@
+html {
+  margin-top: 150px;
+  margin-bottom: 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: block;
+}
+body {
+  margin: 0 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #3a4145;
+}
+a {
+  color: #3a4145;
+  text-decoration: underline dotted;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  color: #2e2e2e;
+  margin: 0 0 0 0;
+}
+h1 {
+  font-size: 2em;
+}
+h1 small {
+  font-size: 0.5em;
+  opacity: 0.4;
+}
+h2 {
+  font-size: 1.5em;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #2e2e2e;
+}
+section {
+  margin-bottom: 30px;
+}
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 0.9em;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icons > ul > li {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 1px;
+  text-align: center;
+  font-size: 1.6em;
+  border-color: #3a4145;
+  border: solid 1px #3a4145;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+.social-icons > ul > li:hover {
+  background-color: #3a4145;
+  color: white;
+}
+.social-icons > ul > li > a {
+  height: 2em;
+  width: 2em;
+  color: inherit;
+}
+.social-icons > ul > li > a:hover,
+.social-icons > ul > li > avisited {
+  color: inherit;
+}
+.inline-list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.inline-list > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.tooltip-element.tooltip-theme-arrows .tooltip-content {
+  font-size: 0.8em;
+}
