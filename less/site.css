@@ -14,7 +14,7 @@ body {
 }
 a {
   color: #3a4145;
-  text-decoration: underline dotted;
+  text-decoration: underline;
 }
 h1,
 h2,
@@ -51,6 +51,10 @@ p {
   margin-right: 0;
   font-size: 0.9em;
 }
+p small {
+  font-size: 0.5em;
+  opacity: 0.4;
+}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -62,6 +66,34 @@ img {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+.directory {
+  margin-top: -20;
+  margin-bottom: 20px;
+  font-size: 0.80em;
+}
+.directory ol {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: inline;
+}
+.breadcrumb {
+  list-style-type: none;
+}
+.breadcrumb li + li::before {
+  content: " / ";
+}
+.breadcrumb li {
+  display: inline;
+}
+.breadcrumb a.active {
+  font-weight: bold;
+}
+.breadcrumb a {
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 .social-icons > ul > li {
   transition: background-color 0.3s ease, color 0.3s ease;

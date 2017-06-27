@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Msc thesis
+layout: breadcrumbed
+title: Thesis - type 1
+breadcrumb: Type 1
 ---
 <div class="container">
     <h1>Main heading</h1>

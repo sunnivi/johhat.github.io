@@ -13,7 +13,7 @@ Three usefull commands
 * `bundle update` to update Github-pages jekyll dependencies
 
 ## Favico
-In lack of a logo, the favicon is now a [Font Awesome][3] paper plane converted to png with [this great web app][1] and then converted to favicon with [this other great web app][2].
+In lack of a logo, the favicon is now a [Font Awesome][3] icon converted to png with [this great web app][1] and then converted to favicon with [this other great web app][2].
 
 ## Placeholder images
 I've used [placehold.it](http://placehold.it/).
