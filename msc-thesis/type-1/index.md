@@ -1,7 +1,7 @@
 ---
 layout: breadcrumbed
-title: Thesis - type 1
-breadcrumb: Type 1
+title: Thesis - Periodic
+breadcrumb: Periodic
 ---
 <div class="container">
     <h1>Main heading</h1>
