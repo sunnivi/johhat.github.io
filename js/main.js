@@ -1,4 +1,8 @@
 /*Main application entrypoint*/
 (function() {
-	//Do stuff here.
+	$(document).ready(function(){
+		$('.hide-on-load').addClass('hide')
+		$('.show-on-load').removeClass('show-on-load')
+		console.log('Document loaded')
+	})
 })();

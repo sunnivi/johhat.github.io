@@ -2,25 +2,29 @@
 layout: default 
 title: 
 ---
-<div class="container">
+<div class="container-home">
   <section class="heading">
     <h1>Sunniva Indrehus</h1>
     <hr/>
     <div class="social-icons">
-      <ul class="inline-list">
-        <li>
-          <a href="mailto:{{site.email}}">
-              <i class="social-icon fa fa-envelope-o" title="Email"></i>
+      <!--Content box class on these elements are a quick fix. 
+        The original CSS was designed using content box, 
+        before the entire template was changed to border-box
+        -->
+      <ul class="inline-list content-box">
+        <li class="content-box">
+          <a class="content-box" href="mailto:{{site.email}}">
+              <i class="social-icon fa fa-envelope-o content-box" title="Email"></i>
             </a>
         </li>
-        <li>
-          <a href="https://www.linkedin.com/in/sunniva-indrehus-9457b485/" target="_blank">
-              <i class="social-icon fa fa-linkedin" title="LinkedIn"></i>
+        <li class="content-box">
+          <a class="content-box" href="https://www.linkedin.com/in/sunniva-indrehus-9457b485/" target="_blank">
+              <i class="social-icon fa fa-linkedin content-box" title="LinkedIn"></i>
             </a>
         </li>
-        <li>
-          <a href="https://github.com/{{site.github_username}}" target="_blank">
-              <i class="social-icon fa fa-github" title="Github"></i>
+        <li class="content-box">
+          <a class="content-box" href="https://github.com/{{site.github_username}}" target="_blank">
+              <i class="social-icon fa fa-github content-box" title="Github"></i>
             </a>
         </li>
       </ul>
