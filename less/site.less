@@ -1,5 +1,11 @@
 @main-color: rgb(58, 65, 69);
 @heading-color: rgb(46, 46, 46);
+@container-width: 1000px;
+@container-home-width: 600px;
+
+* {
+	box-sizing: border-box;
+}
 
 html {
 	margin-top: 150px;
@@ -14,7 +20,7 @@ body {
 
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 1rem;
 
 	color: @main-color;
 }
@@ -31,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2rem;
 
 	small {
 		font-size: 0.5em;
@@ -40,7 +46,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 hr {
@@ -58,7 +64,7 @@ p {
 	margin-bottom: 1em;
 	margin-left: 0;
 	margin-right: 0;
-	font-size: 0.9em;	
+	font-size: 1rem;	
 
 	small {
 		font-size: 0.5em;
@@ -71,12 +77,44 @@ img {
 	max-height:100%;	
 }
 
+
+.img-container-2 {
+
+	width: 100%;
+	white-space: nowrap;
+
+	&>{
+		.img-sub-container {
+			display: inline-block;
+			width: 50%;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.hide-on-load {
+	// Included for completeness
+}
+
+.show-on-load{
+	display: none;
+}
+
 .border {
 	border: 1px solid @main-color
 }
 
 .container {
-	max-width: 600px;
+	max-width: @container-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-home {
+	max-width: @container-home-width;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -123,6 +161,8 @@ img {
 
 
 }
+
+.content-box {box-sizing: content-box; }
 
 .social-icons {
 

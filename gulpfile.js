@@ -20,6 +20,8 @@ var jshint      = require('gulp-jshint');
 var paths = {
 	js: [ 
 		//Note: order matters - the files will be concated in order of appearance
+		'./node_modules/jquery/dist/jquery.js',
+		'./node_modules/holderjs/holder.js',
 		'./js/**/*.js'
 	],
 	less: [
@@ -30,7 +32,7 @@ var paths = {
     fonts: [
 		'./node_modules/font-awesome/fonts/*'
 	],
-	images: './images/*'
+	images: './images' //'./public/img-raw/*'
 };
 
 /*
@@ -39,10 +41,12 @@ var paths = {
 gulp.task('image-min', function () {
     return gulp.src(paths.images)
         .pipe(imagemin({
+			interlaced: true,
             progressive: true,
+			optimizationLevel: 5,
             svgoPlugins: [{removeViewBox: false}],
         }))
-        .pipe(gulp.dest('./public/assets'));
+        .pipe(gulp.dest('./public/img'));
 });
 
 /*
