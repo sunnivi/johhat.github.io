@@ -10,9 +10,7 @@ breadcrumb: Thesis
         <li><a href="/msc-thesis/regular-periodic-bundle/" >Regular periodic bundle</a></li>
         <li><a href="/msc-thesis/regular-finite-bundle/" >Regular finite bundle</a></li>
     </ul>
-    <ul>
-        <img class="border show-on-load" src="/public/img-raw/front.jpg" alt="Animation 2">
-    </ul>
-
+    
+    <img class="border show-on-load" src="/public/img-raw/front.jpg" alt="Animation 2">
 </div>
 
