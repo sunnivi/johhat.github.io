@@ -5,7 +5,7 @@ breadcrumb: Thesis
 ---
 <div class="container">
     <h1>Exploring Biopolymers by the Fibre Bundle Model</h1>
-    <p>Additonal videos for my Master thesis.</p>
+    <p>Additional videos related to my master thesis.</p>
     <ul>
         <li><a href="/msc-thesis/regular-periodic-bundle/" >Regular periodic bundle</a></li>
         <li><a href="/msc-thesis/regular-finite-bundle/" >Regular finite bundle</a></li>
